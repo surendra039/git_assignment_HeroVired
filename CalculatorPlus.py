@@ -14,8 +14,9 @@ class Calculator:
     def divide(self, a, b):
         return a / b
 
-    # TODO: Implement the following function to calculate the square root of a number.
     def square_root(self, x):
+        if x < 0:
+            raise ValueError("Cannot find square root of a negative number.")
         return math.sqrt(x)
 
 
@@ -33,3 +34,5 @@ if __name__ == "__main__":
     # Test the square root feature
     num3 = 25
     print(f"The square root of {num3} = {calculator.square_root(num3)}")
+
+
